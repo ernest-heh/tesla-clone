@@ -8,7 +8,7 @@
     <title>Tesla Clone</title>
   </head>
   <body>
-    <header>
+    <header class="white-text">
       <!-- Logo -->
       <a class="logo" href="/">
         <svg viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg">
@@ -95,6 +95,36 @@
 
     <!-- Content -->
     <main>
+      <section id="section-first">
+        <video
+          class="content-video"
+          preload="auto"
+          playsinline=""
+          data-autoplay-desktop="true"
+          data-autoplay-portrait="true"
+          data-autoplay-mobile="true"
+          data-play-on-hover="false"
+          muted=""
+          loop=""
+          data-src-desktop="assets/TestDrive.mp4"
+          data-src-portrait="assets/TestDrive.mp4"
+          data-src-mobile="assets/TestDrive.mp4"
+          data-src="assets/TestDrive.mp4"
+          data-object-fit="true"
+          src="assets/TestDrive.mp4"
+          data-loaded="true"
+          autoplay=""
+        ></video>
+        <div class="content" data-content>
+          <div class="content-header">
+            <h1>Experience Tesla</h1>
+            <p>Schedule a Demo Drive Today</p>
+          </div>
+          <div class="buttons">
+            <a href="">Demo Drive</a>
+          </div>
+        </div>
+      </section>
       <section style="background-image: url('assets/Model-3.avif')">
         <div class="content" data-content>
           <div class="content-header">
@@ -179,6 +209,7 @@
       </section>
     </main>
 
+    <script src="header.js"></script>
     <script src="nav.js"></script>
     <script src="sections.js"></script>
     <!-- <script src="scroll.js"></script> -->
