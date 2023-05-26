@@ -127,6 +127,7 @@ section .content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 section:first-child .content {
@@ -167,7 +168,7 @@ section .buttons a {
   background-color: #f4f4f4;
   color: inherit;
   padding: 12px 80px 14px;
-  border-radius: 6px;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
 }
@@ -256,4 +257,19 @@ aside .nav-more-icon {
 .backdrop.active {
   visibility: visible;
   opacity: 1;
+}
+
+footer {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+
+footer a {
+  margin: 0 0.4rem;
+  text-decoration: none;
+  color: #8a8c8e;
 }
