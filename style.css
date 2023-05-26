@@ -15,6 +15,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -29,6 +31,7 @@ body {
 
 #menuBtn {
   background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(16px);
   padding: 0.5rem 1rem;
   border-radius: 4px;
 }
@@ -77,10 +80,36 @@ header nav.right {
   text-align: right;
 }
 
+@media (min-height: 30em) {
+  main {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
+  section {
+    height: 100vh;
+  }
+
+  .content > * {
+    opacity: 0;
+    /* transform: translate3d(0, 4rem, 0); */
+    transition: opacity 800ms var(--delay),
+      transform 800ms cubic-bezier(0.13, 0.07, 0.26, 0.99) var(--delay);
+  }
+}
+
+.is-visible .content > * {
+  opacity: 1;
+  /* transform: translate3d(0, 1rem, 0); */
+}
+
 section {
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center center;
+  scroll-snap-align: start;
+  position: relative;
 }
 
 section .content {
@@ -197,6 +226,7 @@ aside .nav-more-icon {
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(4px);
   transition: visibility 300ms, opacity 300ms;
+  z-index: 3;
 }
 
 .backdrop.active {
